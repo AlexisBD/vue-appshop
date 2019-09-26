@@ -1,12 +1,18 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="camera-modal-container">
+      <span @click="capture" class="take-picture-button mdl-button mdl-js-button mdl-button--fab --colored">
+        <i class="material-icons">Camera</i>
+      </span>
     </div>
-    <router-view/>
   </div>
 </template>
+
+<script>
+require('material-design-lite')
+import firebase from 'firebase'
+</script>
+
 
 <style>
 #app {
